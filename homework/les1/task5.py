@@ -70,7 +70,7 @@ if status > 0:
         if employees_count.isdigit():
             employees_count = int(employees_count)
             break
-    print("Введено отличное от числа значение")
+        print("Введено отличное от числа значение")
 
     company.employees = employees_count
     company.calculate_profitability_by_employee()
