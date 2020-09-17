@@ -14,8 +14,8 @@ def parse_string(pars_string: str) -> str:
     new_string = ""
     split = pars_string.split(" ")
     for item in split:
-        new_string += int_func(item) + " "
-    return new_string
+        new_string = str(f"{new_string} {int_func(item)}")
+    return new_string[1:]
 
 
 string = parse_string(input())
