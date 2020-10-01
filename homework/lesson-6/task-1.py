@@ -31,7 +31,7 @@ class TrafficLight:
         print(self.color.name)
 
     def running(self):
-        begin = time.monotonic()
+        time.monotonic()
         while True:
             self.change_color()
             if print():
