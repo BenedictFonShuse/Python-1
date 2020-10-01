@@ -16,8 +16,9 @@
 
 Подсказка: использовать менеджеры контекста.
 """
-from typing import List, Dict, Union
+from typing import List, Dict
 from random import randint
+import json
 
 from homework.lesson_5.file_util import FileUtil
 from homework.lesson_5.form_of_incorporation_enum import FormOfIncorporation as form
@@ -77,7 +78,12 @@ util = FileUtil()
 file_name = "task_7.txt"
 util.generate_file(file_name, firm_generator(10), "w")
 
+
 list_string = util.read_file(file_name)
 firm_dict = text_to_dict(list_string)
 to_list = dict_to_list(firm_dict)
 print(to_list)
+
+j_data = json.dumps(to_list)
+
+util.generate_file("task_7.json", [j_data], "w")
